@@ -9,15 +9,17 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import './index.css';
 
 // Pages
-import Home from './pages/home/home';
+import Home from './pages/Home/Home';
+import List from './pages/List/List';
 import AddEditContact from './pages/add-edit-contact/add-edit-contact';
 
 const App = props => (
   <div className="container-fluid">
     <header>
       <div className="wrapper">
-        <h1 className="logo"><Link to="/">Evolent</Link></h1>
+        <Link to="/"><img src={require('./logo.png')}  /></Link>
 
+        <Link className="add-contact__btn" to="/home">Home</Link>
         <Link className="add-contact__btn" to="/add-contact">Add Contact</Link>
       </div>
     </header>
@@ -35,7 +37,8 @@ App.propTypes = {
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} />
+      <IndexRoute component={List} />
+      <Route path="home" component={Home} />
       <Route path="add-contact" component={AddEditContact} />
       <Route path="edit-contact/:user_id" component={AddEditContact} />
     </Route>

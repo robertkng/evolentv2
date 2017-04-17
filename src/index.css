@@ -76,20 +76,6 @@ header .wrapper {
   justify-content: space-between;
 }
 
-.logo {
-  padding-top: 10px;
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.logo a,
-.logo a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 .add-contact__btn {
   padding: 15px;
   border: 2px solid #fff;
