@@ -1,6 +1,7 @@
 .contacts {
   width: 35%;
   margin: 20px auto;
+  top: 10%;
   display: flex;
   align-items: center;
   flex-direction: column;

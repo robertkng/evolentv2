@@ -17,13 +17,15 @@ const App = props => (
   <div className="container-fluid">
     <header>
       <div className="wrapper">
-        <Link to="/"><img src={require('./logo.png')}  /></Link>
+        <img src={require('./logo.png')} className="logo" />
 
-        <Link className="add-contact__btn" to="/home">Home</Link>
-        <Link className="add-contact__btn" to="/add-contact">Add Contact</Link>
+        <Link className="pages" to="/add-contact">Add Contact</Link>
+        <Link className="pages" to="/">List Contacts</Link>
+        <Link className="pages" to="/home">Home</Link>
       </div>
     </header>
 
+    <br/>
     {props.children}
   </div>
 );
