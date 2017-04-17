@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import alertify from 'alertifyjs';
 import { Link } from 'react-router';
 import Validations from '../../utils/validation';
@@ -376,8 +377,8 @@ class AddEditContact extends Component {
 }
 
 AddEditContact.propTypes = {
-  params: React.PropTypes.object,
-  user_id: React.PropTypes.string,
+  params: PropTypes.object,
+  user_id: PropTypes.string,
 };
 
 export default AddEditContact;

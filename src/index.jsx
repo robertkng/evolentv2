@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 
 // First we import some modules...
@@ -26,7 +27,7 @@ const App = props => (
 );
 
 App.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 // Finally, we render a <Router> with some <Route>s.

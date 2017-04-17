@@ -43,4 +43,4 @@ In the terminal run command:
 > nodemon server.js
 ```
 
-### In your browser, type the address: http://localhost:3000/
+### In your browser, type the address: http://localhost:5000/

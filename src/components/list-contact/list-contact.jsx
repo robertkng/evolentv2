@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import './list-contact.css';
 
@@ -33,7 +34,7 @@ const ListContact = (props) => {
 };
 
 ListContact.propTypes = {
-  contacts: React.PropTypes.array,
+  contacts: PropTypes.array,
 };
 
 export default ListContact;
