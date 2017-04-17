@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* ================================================================
+  1. CSS Reset Code
+
+  http://meyerweb.com/eric/tools/css/reset/
+===================================================================*/
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, a, address, cite, dfn, img, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section, summary, audio, video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font: inherit;
+  outline: none;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol, ul { list-style: none; }
+
+.container-fluid {
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: 0;
+    cursor: pointer;
+}
+
+.row {
+  margin: 0;
+}
+
+.form-control,
+.btn {
+  border-radius: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Common CSS */
+header {
+  background-color: #512da8;
+  color: #fff;
+}
+
+header .wrapper {
+  width: 96%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.logo a,
+.logo a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.add-contact__btn {
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+.add-contact__btn:hover {
+  border: 2px solid #ff5722;
+  background: #ff5722;
+  color: #fff;
+  text-decoration: none;
+}
