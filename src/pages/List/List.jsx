@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListContact from '../../components/list-contact/list-contact';
+import Contacts from '../../components/Contacts/Contacts';
 import './List.css';
 
 const baseUrl = 'http://localhost:5000/api';
@@ -14,7 +14,6 @@ class List extends Component {
       inactiveContacts: [],
       isLoading: false,
     };
-
     this.deleteContact = this.deleteContact.bind(this);
   }
 
@@ -105,7 +104,7 @@ class List extends Component {
         </div>
 
         <div className="contact-list">
-          <ListContact contacts={contacts} deleteContact={this.deleteContact} />
+          <Contacts contacts={contacts} deleteContact={this.deleteContact} />
           {
             this.state.isLoading ?
               <div className="contact-loading"><span>Loading...</span></div> :

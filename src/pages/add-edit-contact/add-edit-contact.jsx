@@ -44,7 +44,7 @@ class AddEditContact extends Component {
 
     if (params.user_id) {
       fetch(`${baseUrl}/single-contact/${params.user_id}`, {
-        method: 'get',
+        method: 'GET',
       })
       .then(r => r.json())
       .then((response) => {
@@ -221,7 +221,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'put',
+          method: 'PUT',
           body: JSON.stringify(data),
         })
         .then(r => r.json())
@@ -246,7 +246,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'post',
+          method: 'POST',
           body: JSON.stringify(data),
         })
         .then(r => r.json())

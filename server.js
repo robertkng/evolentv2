@@ -4,14 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const http = require('http');
-const db = require('./server/queries.js');
+const db = require('./models/contacts.js');
 
 const app = express();
 const PORT = parseInt(process.env.PORT, 10) || 5000;
 
 // ROUTES FOR OUR API
 // =============================================================================
-const router = new express.Router();              // get an instance of the express Router
+const router = express.Router();              // get an instance of the express Router
 router.get('/contacts/:status', db.getAllContacts);
 router.get('/single-contact/:user_id', db.getSingleContact);
 router.post('/add-contact/', db.createContact);

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import './list-contact.css';
+import './Contacts.css';
 
 const ListContact = (props) => {
   const listOfContacts = props.contacts.map(contact => (
@@ -27,7 +27,7 @@ const ListContact = (props) => {
   }
 
   return (
-    <ul className="list-contacts">
+    <ul className="Contactss">
       {listOfContacts}
     </ul>
   );

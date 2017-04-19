@@ -1,15 +1,3 @@
-// const promise = require('bluebird');
-
-// const options = {
-//   // Initialization Options
-//   promiseLib: promise,
-// };
-
-// const pgp = require('pg-promise')(options);
-
-// const connectionString = 'postgres://postgres:rR9591910797@localhost:5432/evolent';
-// const db = pgp(connectionString);
-
 const pgp = require('pg-promise');
 const db = require('../lib/dbconnect');
 
