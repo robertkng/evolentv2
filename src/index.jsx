@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from 'react-dom';
-
-// First we import some modules...
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
-
-// Common CSS
 import './index.css';
 
 // Pages
@@ -34,8 +30,6 @@ App.propTypes = {
   children: PropTypes.node,
 };
 
-// Finally, we render a <Router> with some <Route>s.
-// It does all the fancy routing stuff for us.
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>

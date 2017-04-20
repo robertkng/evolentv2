@@ -44,7 +44,7 @@ class AddEditContact extends Component {
 
     if (params.user_id) {
       fetch(`${baseUrl}/single-contact/${params.user_id}`, {
-        method: 'get',
+        method: 'GET',
       })
       .then(r => r.json())
       .then((response) => {
@@ -72,6 +72,7 @@ class AddEditContact extends Component {
     }
   }
 
+  // Reset form after submission
   componentWillReceiveProps(nextProps) {
     if (nextProps.params.user_id !== this.props.params.user_id) {
       this.resetContactForm(nextProps);
@@ -161,9 +162,30 @@ class AddEditContact extends Component {
       status: {
         value: true,
       },
-      touched: false,
       disabled: !props.params.user_id,
+      touched: false,
     });
+  }
+
+  alpha(e) {
+    const values = /[a-zA-Z]+/g;
+    if(!values.test(e.key)) {
+      e.preventDefault();
+    }
+  }
+
+  numeric(e) {
+    const values = /[0-9]+/g;
+    if(!values.test(e.key)) {
+      e.preventDefault();
+    }
+  }
+
+  alphaNumeric(e) {
+    const values = /[0-9a-zA-Z@.]+/g;
+    if(!values.test(e.key)) {
+      e.preventDefault();
+    }
   }
 
   // Save Contact
@@ -221,7 +243,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'put',
+          method: 'PUT',
           body: JSON.stringify(data),
         })
         .then(r => r.json())
@@ -246,7 +268,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'post',
+          method: 'POST',
           body: JSON.stringify(data),
         })
         .then(r => r.json())
@@ -297,6 +319,7 @@ class AddEditContact extends Component {
                 ['required', 'alphabets'],
               )}
               value={firstName.value}
+              onKeyPress={(e) => this.alpha(e)}
               className="contact-input"
             />
             <span className="error">{firstName.error}</span>
@@ -312,6 +335,7 @@ class AddEditContact extends Component {
                 ['required', 'alphabets'],
               )}
               value={lastName.value}
+              onKeyPress={(e) => this.alpha(e)}
               className="contact-input"
             />
             <span className="error">{lastName.error}</span>
@@ -327,6 +351,7 @@ class AddEditContact extends Component {
                 ['required', 'email'],
               )}
               value={email.value}
+              onKeyPress={(e) => this.alphaNumeric(e)}
               className="contact-input"
             />
             <span className="error">{email.error}</span>
@@ -342,6 +367,7 @@ class AddEditContact extends Component {
                 ['required', 'numbers'],
               )}
               value={phoneNumber.value}
+              onKeyPress={(e) => this.numeric(e)}
               className="contact-input"
             />
             <span className="error">{phoneNumber.error}</span>

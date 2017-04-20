@@ -26,7 +26,7 @@ class List extends Component {
     const contactState = isActive ? 'Active' : 'Inactive';
 
     fetch(`${baseUrl}/contacts/${contactState}`, {
-      method: 'get',
+      method: 'GET',
     })
     .then(r => r.json())
     .then((response) => {
@@ -64,7 +64,7 @@ class List extends Component {
     });
 
     fetch(`${baseUrl}/contact/${userID}`, {
-      method: 'delete',
+      method: 'DELETE',
     })
     .then(() => {
       this.getAllContacts(this.state.isActive);
