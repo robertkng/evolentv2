@@ -3,7 +3,7 @@ const db = require('../lib/dbconnect');
 
 /* Get all contacts */
 function getAllContacts(req, res, next) {
-  db.any('SELECT * FROM contacts WHERE status=$1', req.params.status)
+  db.any(`SELECT * FROM contacts WHERE status=$1`, req.params.status)
     .then((data) => {
       res.status(200)
         .json({
@@ -17,7 +17,7 @@ function getAllContacts(req, res, next) {
 /* Add Contact */
 /* eslint-disable no-template-curly-in-string */
 function createContact(req, res, next) {
-  db.none('insert into contacts(first_name, last_name, email, phone_number, status)' +
+  db.none('INSERT into contacts (first_name, last_name, email, phone_number, status)' +
       'values(${first_name}, ${last_name}, ${email}, ${phone_number}, ${status})',
     req.body)
     .then(() => {

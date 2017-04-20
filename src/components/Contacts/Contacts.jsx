@@ -27,7 +27,7 @@ const ListContact = (props) => {
   }
 
   return (
-    <ul className="Contactss">
+    <ul className="Contacts">
       {listOfContacts}
     </ul>
   );

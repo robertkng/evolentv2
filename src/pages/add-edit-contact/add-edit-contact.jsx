@@ -44,7 +44,7 @@ class AddEditContact extends Component {
 
     if (params.user_id) {
       fetch(`${baseUrl}/single-contact/${params.user_id}`, {
-        method: 'GET',
+        method: 'get',
       })
       .then(r => r.json())
       .then((response) => {
@@ -221,7 +221,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'PUT',
+          method: 'put',
           body: JSON.stringify(data),
         })
         .then(r => r.json())
@@ -232,7 +232,7 @@ class AddEditContact extends Component {
           });
 
           if (res.status === 'error') {
-            alertify.alert('OOPS!!!', res.error, 'error');
+            alertify.alert('Please re-enter the information.', res.error, 'error');
             return false;
           }
 
@@ -246,7 +246,7 @@ class AddEditContact extends Component {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
           },
-          method: 'POST',
+          method: 'post',
           body: JSON.stringify(data),
         })
         .then(r => r.json())
@@ -257,7 +257,7 @@ class AddEditContact extends Component {
             this.setState({
               disabled: false,
             });
-            alertify.alert('OOPS!!!', res.error, 'error');
+            alertify.alert('Please re-enter the information.', res.error, 'error');
             return false;
           }
 
@@ -366,7 +366,7 @@ class AddEditContact extends Component {
               className="save-contact contact-form-btn" disabled={disabled}
               onClick={this.saveContact}
             >
-              Save Contact
+              Save
             </button>
             <Link to="/" className="cancel-contact contact-form-btn">Cancel</Link>
           </div>

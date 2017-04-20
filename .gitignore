@@ -5,6 +5,7 @@ node_modules
 
 # testing
 coverage
+routes/
 
 # production
 build
@@ -14,3 +15,4 @@ build
 npm-debug.log
 .env
 dist/
+scrapcode.js
