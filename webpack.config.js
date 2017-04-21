@@ -10,7 +10,7 @@ const APP_DIR           = path.resolve(__dirname, 'src');
 module.exports = {
   entry: `${APP_DIR}/index.jsx`,
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '/js/main.js',
   },
   devtool: 'eval-source-map',
