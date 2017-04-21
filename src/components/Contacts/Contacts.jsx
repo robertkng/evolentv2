@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import './Contacts.css';
 
@@ -34,7 +34,7 @@ const ListContact = (props) => {
 };
 
 ListContact.propTypes = {
-  contacts: PropTypes.array,
+  contacts: React.PropTypes.array,
 };
 
 export default ListContact;
