@@ -404,8 +404,8 @@ class AddEditContact extends Component {
 }
 
 AddEditContact.propTypes = {
-  params: PropTypes.object,
-  user_id: PropTypes.string,
+  params: React.PropTypes.object,
+  user_id: React.PropTypes.string,
 };
 
 export default AddEditContact;

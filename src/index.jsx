@@ -27,7 +27,7 @@ const App = props => (
 );
 
 App.propTypes = {
-  children: PropTypes.node,
+  children: React.PropTypes.node,
 };
 
 render((
