@@ -13,6 +13,8 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: '/js/main.js',
   },
+  cache: true,
+  debug: true,
   devtool: 'eval-source-map',
   stats: {
     colors: true,
@@ -20,7 +22,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: `${__dirname}/src/index.tmpl.html`,
+      title: 'Evolent Health',
+      xhtml: true,
+      inject: false,
+      template: require('html-webpack-template'),
+      appMountId: 'root-container',
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true,
@@ -32,15 +38,15 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.(svg|gif|png|jpg)$/,
-        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]',
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
       },
       {
         test: /\.(js|jsx)$/,
-        loader: 'babel',
+        loader: 'babel'
       },
       {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
