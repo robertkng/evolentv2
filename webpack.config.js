@@ -4,14 +4,15 @@ const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const BUILD_DIR         = path.resolve(__dirname, 'dist');
 const APP_DIR           = path.resolve(__dirname, 'src');
 
 
 module.exports = {
   entry: `${APP_DIR}/index.jsx`,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '/js/main.js',
+    path: BUILD_DIR,
+    filename: '/js/[name].js',
   },
   devtool: 'eval-source-map',
   stats: {
