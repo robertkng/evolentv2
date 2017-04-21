@@ -25,7 +25,7 @@ module.exports = {
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),
-      appMountId: 'root-container',
+      appMountId: 'root-app',
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true,
