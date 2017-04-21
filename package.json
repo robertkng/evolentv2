@@ -4,7 +4,7 @@
   "description": "React application using webpack",
   "main": "server.js",
   "engines": {
-    "node": "7.0.0"
+    "node": "6.6.0"
   },
   "private": true,
   "scripts": {
