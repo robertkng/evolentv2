@@ -389,7 +389,8 @@ class AddEditContact extends Component {
 
           <div className="contact-field-grp contact-btns">
             <button
-              className="save-contact contact-form-btn" disabled={disabled}
+              className="save-contact contact-form-btn"
+              disabled={disabled}
               onClick={this.saveContact}
             >
               Save
