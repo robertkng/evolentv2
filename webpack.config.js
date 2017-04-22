@@ -34,11 +34,11 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.(svg|gif|png|jpg)$/,
-        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]',
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
       },
       {
         test: /\.(js|jsx)$/,
@@ -46,11 +46,12 @@ module.exports = {
       },
       {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader?name=/fonts/[name].[ext]',
-      },
-    ],
+        loader: 'file-loader?name=/fonts/[name].[ext]'
+      }
+    ]
   },
+
   resolve: {
     extensions: ['', '.js', '.jsx'],
-  },
+  }
 };
