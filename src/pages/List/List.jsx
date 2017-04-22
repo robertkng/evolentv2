@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contacts from '../../components/Contacts/Contacts';
+import Contacts from '../../components/Contacts/Contacts.jsx';
 import './List.css';
 
 const baseUrl = 'http://localhost:5000/api';

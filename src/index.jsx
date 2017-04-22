@@ -5,9 +5,9 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import './index.css';
 
 // Pages
-import Home from './pages/Home/Home';
-import List from './pages/List/List';
-import AddEditContact from './pages/add-edit-contact/add-edit-contact';
+import Home from './pages/Home/Home.jsx';
+import List from './pages/List/List.jsx';
+import AddEditContact from './pages/add-edit-contact/add-edit-contact.jsx';
 
 const App = props => (
   <div className="container-fluid">
