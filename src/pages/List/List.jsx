@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Contacts from '../../components/Contacts/Contacts';
 import './List.css';
 
+// const baseUrl = 'http://localhost:5000/api';
 const baseUrl = 'http://evolent.herokuapp.com/api';
 
 class List extends Component {
