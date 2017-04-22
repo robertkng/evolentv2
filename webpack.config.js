@@ -22,7 +22,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Evolent Health',
+      xhtml: true,
+      inject: false,
       template: `${__dirname}/src/index.tmpl.html`,
+      appMountId: 'root-app'
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true
