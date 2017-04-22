@@ -50,11 +50,8 @@ module.exports = {
       },
       {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader?name=/fonts/[name].[ext]',
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-  },
+        loader: 'file-loader?name=/fonts/[name].[ext]'
+      }
+    ]
+  }
 };
