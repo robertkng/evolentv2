@@ -50,5 +50,9 @@ module.exports = {
         loader: 'file-loader?name=/fonts/[name].[ext]'
       }
     ]
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   }
 };
