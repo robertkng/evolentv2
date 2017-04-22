@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Validations from '../../utils/validation';
 import './add-edit-contact.css';
 
-const baseUrl = 'http://localhost:5000/api';
+const baseUrl = 'https://localhost:5000/api';
 
 class AddEditContact extends Component {
   constructor(props) {
