@@ -18,15 +18,10 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
-    errorDetails: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Evolent Health',
-      xhtml: true,
-      inject: false,
-      template: require('html-webpack-template'),
-      appMountId: 'root-app',
+      template: `${__dirname}/src/index.tmpl.html`,
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true,
@@ -42,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(svg|gif|png|jpg)$/,
-        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]',
       },
       {
         test: /\.(js|jsx)$/,
@@ -50,11 +45,11 @@ module.exports = {
       },
       {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader?name=/fonts/[name].[ext]'
-      }
-    ]
+        loader: 'file-loader?name=/fonts/[name].[ext]',
+      },
+    ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-  }
+  },
 };
