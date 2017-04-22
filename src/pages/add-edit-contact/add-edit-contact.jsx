@@ -6,7 +6,7 @@ import Validations from '../../utils/validation';
 import './add-edit-contact.css';
 
 // const baseUrl = 'http://localhost:5000/api';
-const baseUrl = 'http://evolent.herokuapp.com/api';
+const baseUrl = 'https://evolent.herokuapp.com/api';
 
 class AddEditContact extends Component {
   constructor(props) {
