@@ -18,7 +18,7 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
-    errorDetails: true,
+    errorDetails: true
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(svg|gif|png|jpg)$/,
-        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]',
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
       },
       {
         test: /\.(js|jsx)$/,
@@ -53,5 +53,8 @@ module.exports = {
         loader: 'file-loader?name=/fonts/[name].[ext]'
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   }
 };
