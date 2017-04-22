@@ -18,6 +18,7 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
+    errorDetails: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
