@@ -25,8 +25,8 @@ module.exports = {
       template: `${__dirname}/src/index.tmpl.html`,
     }),
     new ExtractTextPlugin('/css/[name].css', {
-      allChunks: true,
-    }),
+      allChunks: true
+    })
   ],
 
   module: {
